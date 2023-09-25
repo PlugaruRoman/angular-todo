@@ -1,0 +1,14 @@
+<h1
+  class="text-blue-500 hover:text-blue-800 mb-20 text-center font-bold size-25"
+>
+  Todo Widget
+</h1>
+
+<app-todo-create-form-ui (create)="onCreate($event)"></app-todo-create-form-ui>
+
+<app-todo-list-ui
+  [todoList]="todoList$ | async"
+  (delete)="onDelete($event)"
+  (toggle)="onToggle($event)"
+  (edit)="onEdit($event)"
+></app-todo-list-ui>

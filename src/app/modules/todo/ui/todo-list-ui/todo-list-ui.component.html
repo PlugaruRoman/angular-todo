@@ -1,0 +1,16 @@
+<ul class="w-full max-w-xs m-auto flex-column mt-20">
+  <li *ngFor="let todo of todoList" class="pt-4">
+    <app-todo-list-item-ui
+      *ngIf="!editList.includes(todo.id)"
+      [todo]="todo"
+      (delete)="deleteTodo(todo.id)"
+      (toggle)="toggleTodo(todo.id)"
+      (edit)="addToEdit(todo.id)"
+    ></app-todo-list-item-ui>
+    <app-todo-list-edit-ui
+      *ngIf="editList.includes(todo.id)"
+      (edit)="editTodo($event, todo.id)"
+      [todo]="todo"
+    ></app-todo-list-edit-ui>
+  </li>
+</ul>

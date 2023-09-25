@@ -1,0 +1,22 @@
+<form action="#" (submit)="onEdit()">
+  <input
+    title="name"
+    type="text"
+    name="name"
+    [(ngModel)]="name"
+    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4 mt-6"
+  />
+  <button
+    type="submit"
+    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-6"
+  >
+    ok
+  </button>
+  <button
+    type="button"
+    (click)="onCancel()"
+    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+  >
+    cancel
+  </button>
+</form>
